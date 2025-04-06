@@ -26,18 +26,123 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>Overlevelsesformular</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Red dit liv og din hund!</h2>
+          <p>
+            Hjælp os med at bekæmpe de parasit-fyldte hundegarde i København!
+          </p>
         </article>
-        <form id="webform"></form>
+        <br />
+
+        <form>
+          <div class="form-grid">
+            <div class="form-group">
+              <br />
+              <label for="worried"
+                >Har du mistanke om parasitter i din hundegård?</label
+              ><br />
+              <input type="radio" id="yes" name="worried" value="yes" />Ja
+              <input type="radio" id="no" name="worried" value="no" />Nej
+              <br /><br />
+            </div>
+
+            <div class="form-group">
+              <br />
+              <label for="area">Vælg dit område</label> <br />
+              <select name="area" id="area">
+                <option value="Frederiksberg">Frederiksberg Hundegård</option>
+                <option value="Nørrebro">Nørrebro Hundegård</option>
+                <option value="Østerbro">Vesterbro Hundegård</option>
+                <option value="Vesterbro">Kongens Have</option>
+                <option value="Valby">Valby Hundegård</option>
+                <option value="Andet">Andet</option>
+              </select>
+              <br />
+              <br />
+            </div>
+
+            <div class="form-group">
+              <br />
+              <label for="symptoms"
+                >I hvor høj grad, er du i stand til at identificere symptomerne
+                på parasitinfektioner hos din hund?</label
+              >
+              <input
+                type="range"
+                id="symptoms"
+                name="symptoms"
+                value="0"
+                min="0"
+                max="100"
+              />
+              <br /><br />
+            </div>
+
+            <div class="form-group">
+              <br />
+              <label for="parasite">Hvilken parasit frygter du mest?</label
+              ><br />
+              <input
+                type="radio"
+                id="ticks"
+                name="parasite"
+                value="ticks"
+              />Flåter
+              <br />
+              <input
+                type="radio"
+                id="lice"
+                name="parasite"
+                value="lice"
+              />Lopper
+              <br />
+              <input type="radio" id="worm" name="parasite" value="worm" />Orme
+              <br />
+              <br />
+            </div>
+
+            <div class="form-group">
+              <br />
+              <label for="e-mail"
+                >Indtast e-mail og få de uundværlige overlevelsesråd</label
+              >
+              <br /><span class="instruktion">Skal indeholde et @ tegn</span>
+              <br />
+              <input type="text" id="e-mail" name="e-mail" required />
+              <br /><br />
+              <button id="submit" type="submit">Send</button>
+              <br />
+            </div>
+          </div>
+        </form>
       </section>
       <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
+        <h2>Resultat</h2>
+        <article id="sum">
+          <div>
+            <h3>Har du mistanke:</h3>
+            <p>Ja</p>
+          </div>
+          <div>
+            <h3>Dit område:</h3>
+            <p>Frederiksberg</p>
+          </div>
+          <div>
+            <h3>Grad i %:</h3>
+            <p>50%</p>
+          </div>
+          <div>
+            <h3>Frygter mest:</h3>
+            <p>Orme</p>
+          </div>
+          <div>
+            <h3>Mail:</h3>
+            <p><b></b>Benthansen@gmail.com</p>
+          </div>
+
+          <button id="submit" type="submit">Godkend og Luk</button>
         </article>
       </section>
     </main>
